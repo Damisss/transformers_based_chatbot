@@ -3,7 +3,7 @@ In order to build this chatbot we have used a dataset that contains various type
 
 We have tried a State of the art natural language processing from BERT-large. Our future plan is to used other transfomers based model like Distilbert, Electra, Albert etc....
 
-<img src="/images/chatbot.gif" width="400" height="400"/>
+<img src="/images/chatbot.gif" width="500" height="550"/>
 
 # Prerequisites
 * Docker 
