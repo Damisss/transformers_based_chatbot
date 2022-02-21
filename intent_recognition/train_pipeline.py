@@ -40,8 +40,8 @@ def run_training()->None:
     tokenizer=BertTokenizer.from_pretrained(config.model_config.model_config, do_lower_case=True)
     #initialize dataloader module
     data_loader_module = DataLoaderModule(
-        train_data=train_data.iloc[:4000], 
-        test_data=test_data[:300], 
+        train_data=train_data, 
+        test_data=test_data, 
         maxlen=config.model_config.max_sentence_length, 
         batch_size=config.model_config.batch_size, 
         tokenizer= tokenizer
