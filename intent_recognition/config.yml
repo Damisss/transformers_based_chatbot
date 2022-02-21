@@ -1,0 +1,25 @@
+data_folder: intent_recognition/initent-recognition-raw-data
+best_checkpoints_path: intent_recognition/registered_models_checkpoints
+num_class: 7
+seed_value: 42
+#steps_per_epoch: 100
+test_size: .3
+epochs: 1
+batch_size: 10
+max_sentence_length: 30
+model_config: bert-base-uncased
+intents:
+  - AddToPlaylist 
+  - BookRestaurant 
+  - GetWeather 
+  - PlayMusic
+  - RateBook 
+  - SearchCreativeWork 
+  - SearchScreeningEvent
+
+mlflow_config:
+  artifacts_dir: artifacts
+  experiment_name: intent-recognition-bert
+  run_name: intent-recognition-bert
+  registered_model_name: pytorch
+  remote_server_uri: http://mlflow:1234

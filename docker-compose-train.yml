@@ -1,0 +1,28 @@
+version: "3"
+services:
+  mlflow:
+    container_name: mlflow-image
+    image: damiss/intent_recognition_mlflow:master
+    build:
+      context: ./
+      dockerfile: ./docker/mlflow/Dockerfile
+    ports:
+      - 1234:1234
+    volumes:
+      - artifacts:/app/artifacts
+
+  bert_model:
+    container_name: intent-recognition-image
+    image: damiss/intent_recognition:master
+    build:
+      context: ./
+      dockerfile: ./docker/bert/Dockerfile
+    ports:
+      - 6006:6006
+    depends_on:
+      - mlflow
+    volumes:
+    - artifacts:/app/artifacts
+
+volumes:
+  artifacts:

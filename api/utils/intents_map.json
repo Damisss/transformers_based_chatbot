@@ -1,0 +1,9 @@
+{
+    "AddToPlaylist":[{"title": " Add to Play List", "description":"Please tap the three dots on the top right. A menu pops up. Tap Add to playlist and on the next menu, and select the playlist in which you want it to reside.", "url":[]}],
+    "BookRestaurant":[{"title": " Reserve a place in a Restaurant", "description":"Please refer to below links for reserving a table in our restaurant.", "url":[]}],
+    "GetWeather":[{"title": "", "description":"", "url":[]}],
+    "PlayMusic":[{"title":"Play Music", "description": "Refer below links for playing music online",  "url": ["https://www.jiosaavn.com", "https://freeplaymusic.com/#/"]}],
+    "RateBook": [{"title": "Book reviews", "description":"Thank you so much for ranting our book. Please click on below link.", "url":[]}],
+    "SearchCreativeWork":[{"title":"Search Creative Works", "description": "Please refer below links for creative works", "url": ["https://www.thedrum.com/creative-works", "https://uh.edu/honors/Programs-Minors/honors-minors/center-creative-work/"]}],
+    "SearchScreeningEvent":[{"title":"Search Screening Event", "description": "Please refer below link for screening events", "url": ["https://www.eventbrite.com/d/online/screenings/", "https://www.stoprepeatinghistory.org/screening-event-planning"]}]
+}

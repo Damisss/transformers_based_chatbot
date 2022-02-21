@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+      container_name: frontend-image
+      image: damiss/frontend:master
+      build: 
+        context: ./
+        dockerfile: ./docker/frontend/Dockerfile
+      ports:
+        - 3000:3000
+      volumes:
+        - /app/node_modules
+        - ./frontend:/app 
+
+  api:
+    container_name: api-image
+    image: damiss/api:master
+    build:
+      context: ./
+      dockerfile: ./docker/api/Dockerfile
+    ports:
+      - 3001:3001
+    environment:
+      XRAPIDAPIKEY: e468d98724msh7380b7960df4c02p18c627jsnffbdc0763d43
+      XRAPIDAPIHOST: google-search3.p.rapidapi.com
+      GEATWEATHERAPIKEY: 82c46cbbff0b4269cd1d3f15806db9eb
+      GEATCITYAPIKEY: 6b0c2860-925a-11ec-85f7-175543c8f270
+
+    command:  
+      - /bin/bash
+      - -c
+      - |
+        python api/start.py 
+    # volumes:
+    #   - ./api:/app 
+    #&&fg
